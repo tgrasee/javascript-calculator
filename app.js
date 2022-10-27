@@ -47,12 +47,48 @@ function subtract(...args) {
   }
      
 }
-subtract('a', 2);
+// subtract(2, 2, 2);
 
-function multiply() {
+function multiply(...args) {
+  try {
+    args.forEach(number);
 
+    function number(item) {
+      if (isNaN(item) === true) {
+        throw 'not a number';
+      }
+    }
+    const product = args.reduce(myFunc);
+
+    function myFunc(total, num) {
+      return total * num;
+    }
+    console.log(product);
+  }
+  catch(err) {
+    console.log(err);
+  }
 }
+// multiply(3, 2, 2);
 
-function divide() {
+function divide(...args) {
+  try {
+    args.forEach(number);
 
+    function number(item) {
+      if (isNaN(item) === true) {
+        throw 'not a number';
+      }
+    }
+    const quotient = args.reduce(myFunc);
+
+    function myFunc(dividend, divisor) {
+      return dividend / divisor;
+    }
+    console.log(quotient);
+  }
+  catch(err) {
+    console.log(err);
+  }
 }
+// divide(2, 3);
